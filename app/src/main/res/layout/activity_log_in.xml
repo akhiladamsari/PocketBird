@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,7 +9,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".view.LogInActivity"
-   >
+    android:clipToPadding="false"
+    android:background="#c9fbbb"
+    android:backgroundTint="#c9fbbb">
 
     <LinearLayout
         android:layout_centerHorizontal="true"
@@ -16,27 +19,38 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <EditText
-            android:layout_width="337dp"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="enter email"
-            android:ems="10"
-            android:id="@+id/emailText"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/applogo"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:adjustViewBounds="true" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="enter password"
+            android:inputType="textEmailAddress"
+            android:hint="E-mail "
+            android:ems="10"
+            android:id="@+id/emailText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            style="@style/Widget.AppCompat.EditText" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password "
             android:ems="10"
             android:id="@+id/passwordText"
             android:layout_below="@+id/emailText"
             android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/emailText" />
+            android:layout_alignEnd="@+id/emailText"
+            android:inputType="textPassword"
+            style="@style/Widget.AppCompat.EditText" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -50,6 +64,7 @@
             android:background="@color/buttonColor"
             android:textColor="@color/white"
            />
+
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="match_parent"
@@ -73,6 +88,7 @@
             android:background="@color/buttonColor"
             android:textColor="@color/white"
             android:layout_marginTop="15dp"/>
+
     </LinearLayout>
 
 </ScrollView>
