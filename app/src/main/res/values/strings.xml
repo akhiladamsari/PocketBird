@@ -1,4 +1,8 @@
 <resources>
+<<<<<<< HEAD
+=======
+    <string name="app_name">Pocket Bird</string>
+>>>>>>> origin/master
     <string name="title_activity_google_maps">Map</string>
     <string name="app_name">Pocket Bird</string>
 
